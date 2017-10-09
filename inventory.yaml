@@ -1,0 +1,8 @@
+[puppet-agents]
+web1.karen.jtl.co.ke
+db1.karen.jtl.co.ke
+mail1.karen.jtl.co.ke
+mailtest.karen.jtl.co.ke
+
+[puppet-master]
+puppet-master.karen.jtl.co.ke

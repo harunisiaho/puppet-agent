@@ -1,0 +1,3 @@
+---
+puppet_master: "puppet-master.karen.jtl.co.ke"
+run_interval : "3600"

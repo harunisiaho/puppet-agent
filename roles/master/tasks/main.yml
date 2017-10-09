@@ -1,0 +1,45 @@
+
+- synchronize:
+    src:  /opt/my_projects/puppet/ssh/
+    dest: /etc/puppetlabs/code/environments/production/modules/ssh/
+
+- synchronize:
+    src:  /opt/my_projects/puppet/sudo/
+    dest: /etc/puppetlabs/code/environments/production/modules/sudo/
+
+- synchronize:
+    src:  /opt/my_projects/puppet/apache/
+    dest: /etc/puppetlabs/code/environments/production/modules/apache/
+
+- synchronize:
+    src:  /opt/my_projects/puppet/mysql/
+    dest: /etc/puppetlabs/code/environments/production/modules/mysql/
+
+- synchronize:
+    src:  /opt/my_projects/puppet/puppet/
+    dest: /etc/puppetlabs/code/environments/production/modules/puppet/
+
+- synchronize:
+    src:  /opt/my_projects/puppet/postfix/
+    dest: /etc/puppetlabs/code/environments/production/modules/postfix/
+
+- copy:
+    src: /opt/my_projects/puppet/nodes.pp
+    dest: /etc/puppetlabs/code/environments/production/manifests/nodes.pp
+    owner: puppet
+    group: puppet
+    mode: 0644
+
+- copy:
+    src: /opt/my_projects/puppet/site.pp
+    dest: /etc/puppetlabs/code/environments/production/manifests/site.pp
+    owner: puppet
+    group: puppet
+    mode: 0644
+
+- copy:
+    src: "puppet.conf"
+    dest: /etc/puppetlabs/puppet/puppet.conf
+    owner: puppet
+    group: puppet
+    mode: 0644
